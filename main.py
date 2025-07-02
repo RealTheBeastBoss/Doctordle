@@ -49,7 +49,8 @@ def draw_window():
     pygame.draw.rect(Doctordle.screen, "Black", search_rect, 10, 10)
     draw_text(Doctordle.current_search, (Doctordle.width // 2, 230), "Black", 3.5)
     if len(Doctordle.search_list) > 0:
-        draw_text(Doctordle.search_list[Doctordle.search_index].code + " - " + Doctordle.search_list[Doctordle.search_index].title, (Doctordle.width // 2, 280), "Black", 3.5)
+        draw_text(Doctordle.search_list[Doctordle.search_index].code + " - " + Doctordle.search_list[Doctordle.search_index].title + " | " + SERIES_NAMES[Doctordle.search_list[Doctordle.search_index].series] + " | " + Doctordle.search_list[Doctordle.search_index].doctor + " | " + Doctordle.search_list[Doctordle.search_index].era + " | " + Doctordle.search_list[Doctordle.search_index].writer + " | " + Doctordle.search_list[Doctordle.search_index].director + " | " + str(Doctordle.search_list[Doctordle.search_index].rating),
+                  (Doctordle.width // 2, 280), "Black", 3.5)
     # Draw Guessed Episodes:
     draw_text("---------", (Doctordle.width // 2, 300), "Black", 1)
     for text in Doctordle.text_surfaces:
